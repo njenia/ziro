@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import SecretInput from '@/components/SecretInput';
 import LinkDisplay from '@/components/LinkDisplay';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const [secretLink, setSecretLink] = useState<string | null>(null);
@@ -36,6 +37,8 @@ export default function Home() {
         <div className="mt-8 text-center text-sm text-cyan-400/50">
           <p>All encryption happens in your browser. The server never sees your secret.</p>
         </div>
+
+        <Footer />
       </div>
     </div>
   );

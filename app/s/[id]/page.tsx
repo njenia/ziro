@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import SecretDisplay from '@/components/SecretDisplay';
+import Footer from '@/components/Footer';
 
 export default function SecretPage() {
   const params = useParams();
@@ -107,6 +108,8 @@ export default function SecretPage() {
         <div className="bg-black border border-cyan-500/30 rounded-lg p-8">
           <SecretDisplay {...secretData} />
         </div>
+
+        <Footer />
       </div>
     </div>
   );
