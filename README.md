@@ -2,6 +2,8 @@
 
 **Zero knowledge, pure secrecy.**
 
+🌐 **[Try Ziro Live →](https://ziro-sigma.vercel.app/)**
+
 Ziro is an open-source, minimalist web application designed for the temporary, secure sharing of sensitive text data. Its core security feature is Client-Side Encryption, meaning the server stores only encrypted data and is completely "blind" (zero-knowledge) to the actual content.
 
 ## Features
