@@ -54,7 +54,9 @@ export async function importKey(keyString: string): Promise<CryptoKey> {
  * Generate a random IV (Initialization Vector)
  */
 export function generateIV(): Uint8Array {
-  return crypto.getRandomValues(new Uint8Array(IV_LENGTH));
+  const iv = new Uint8Array(IV_LENGTH);
+  crypto.getRandomValues(iv);
+  return iv;
 }
 
 /**
@@ -72,7 +74,7 @@ export async function encrypt(
   const encrypted = await crypto.subtle.encrypt(
     {
       name: ALGORITHM,
-      iv: iv,
+      iv: iv as BufferSource,
     },
     key,
     data
@@ -104,7 +106,7 @@ export async function decrypt(
   const decrypted = await crypto.subtle.decrypt(
     {
       name: ALGORITHM,
-      iv: ivData,
+      iv: ivData as BufferSource,
     },
     key,
     encryptedData
