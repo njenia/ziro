@@ -34,10 +34,6 @@ export default function Home() {
           )}
         </div>
 
-        <div className="mt-8 text-center text-sm text-cyan-400/50">
-          <p>All encryption happens in your browser. The server never sees your secret.</p>
-        </div>
-
         <Footer />
       </div>
     </div>

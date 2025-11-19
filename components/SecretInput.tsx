@@ -70,6 +70,13 @@ export default function SecretInput({ onSecretCreated }: SecretInputProps) {
 
   return (
     <form onSubmit={handleSubmit} className="w-full space-y-6">
+      <div className="mb-4 p-4 bg-cyan-500/5 border border-cyan-500/20 rounded-lg">
+        <p className="text-cyan-300/80 text-sm leading-relaxed">
+          Share sensitive text securely. Your message is encrypted in your browser before being sent to our server. 
+          The decryption key stays in the URL and never reaches our servers.
+        </p>
+      </div>
+
       <div>
         <textarea
           value={text}
